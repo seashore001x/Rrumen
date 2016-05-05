@@ -11,7 +11,7 @@
 ##   title  a string for plot title
 
 
-gvegan <- function(x, y, group, scale = F, method = 'RDA', pointsize = 2.5, title = NULL){
+gRDAplot <- function(x, y, group, scale = F, method = 'RDA', pointsize = 2.5, title = NULL){
   library('ggplot2')
   library('vegan')
   library('ggvegan')
