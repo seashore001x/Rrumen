@@ -4,7 +4,7 @@
 
 ## Introduction
 
-**Rrumen** is a collection of R functions for rumen microbial data analysis. These functions are still under development and may not suitable for daily use.
+**Rrumen** is a collection of R functions for rumen microbial data analysis. These functions are still under development and may not suitable for daily use. R environment and extra packages are required for running this functions
 
 - **summarySE**: Gives count, mean, standard deviation, standard error of the mean, and confidence interval (default 95%)
 - **gerrorbar**: Errorbar plotting using ggplot2 graphic system
@@ -28,7 +28,7 @@ calcSampleSizeForRCT (alpha, gamma, piT, piC, p=0)
 ```r
 calcPowerForRCT (alpha, piT, piC, n)
 ```
-## Example
+## Examples
 - **gerrorbar**
 ![gerrorbar](https://raw.githubusercontent.com/seashore001x/MarkdownPic/master/sb_plot.png)
 - **gRDAplot**
