@@ -26,6 +26,7 @@ gerrorbar <- function(data, xvars, yvars, se, group, smoothline = F,
   data$yvars = data[, yvars]
   data$xvars = data[, xvars]
   data$se = data[, se]
+  data$group = data[, group]
   
   #basic plot
   g = ggplot(data, aes(xvars, yvars, group = group, color = group, shape = group))
