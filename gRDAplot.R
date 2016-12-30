@@ -17,10 +17,10 @@ gRDAplot <- function(x, y, group, scale = F, method = 'RDA', pointsize = 2.5, ti
   library('ggvegan')
   
   # RDA&CCA calculation
-  if (method = 'RDA'){
-    data_rda = rda(x = x, y = y, scale = scale)
-  }else if(method = 'CCA'){
-    data_rda = cca(x = x, y = y, scale = scale)
+  if (method == 'RDA'){
+    data_rda = rda(X = x, Y = y, scale = scale)
+  }else if(method == 'CCA'){
+    data_rda = cca(X = x, Y = y, scale = scale)
   }else{
     return('Wrong method')
   }
