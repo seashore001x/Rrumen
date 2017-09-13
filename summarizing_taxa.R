@@ -2,7 +2,7 @@ library("phyloseq")
 library("data.table")
 library("ggplot2")
 
-fast_melt = function(physeq){
+fast_melt = function(physeq, zero = F){
   # supports "naked" otu_table as `physeq` input.
   otutab = as(otu_table(physeq), "matrix")
   if(!taxa_are_rows(physeq)){otutab <- t(otutab)}
@@ -17,8 +17,14 @@ fast_melt = function(physeq){
                         id.vars = "taxaID",
                         variable.name = "SampleID",
                         value.name = "count")
-  # Remove zeroes, NAs
-  mdt <- mdt[count > 0][!is.na(count)]
+  if(zero == T){
+    # Remove zeroes, NAs
+    mdt <- mdt[count > 0][!is.na(count)]
+  }else{
+    # leave zeroes, but NAs
+    mdt <- mdt[!is.na(count)]
+  }
+  
   # Calculate relative abundance
   mdt[, RelativeAbundance := count / sum(count), by = SampleID]
   if(!is.null(tax_table(physeq, errorIfNULL = FALSE))){
