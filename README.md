@@ -15,6 +15,7 @@
 - **calcPowerForRCT**: Calculate the number of sampe size for randomized control trial
 
 ## Usage
+- **phyloseq2lefse**
 ```r
 phyloseq2lefse(physeq)
 > ps
@@ -36,6 +37,7 @@ Bacteria|Spirochaetes|Spirochaetia|Spirochaetales|Spirochaetaceae|Unclassified  
 ```
 ---
 
+- **GrubbsFlag**
 ```r
 GrubbsFlag(vector)
 > a = c(1, 2, 3, -20, 100)
@@ -49,6 +51,7 @@ GrubbsFlag(vector)
 ```
 ---
 
+- **summarySE**
 ```r
 summarySE (data=NULL, measurevar, groupvars=NULL, na.rm=FALSE, conf.interval=.95, .drop=TRUE)
 
@@ -77,6 +80,7 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1
 ```
 ---
 
+- **gerrorbar**
 ```r
 gerrorbar (data, xvars, yvars, se, group, smoothline = F, pd = 0.5, errorbarwidth = 0.5, pointsize = 3, linesize = 1.3, ylimits = NULL, legendlabels = NULL, legendnames = NULL,  xlab = NULL, ylab = NULL, title = NULL, legendjustification = c(1,0), legendposition = c(1,0))
 ```
@@ -86,15 +90,14 @@ yvars: y asxis variable
 se: a vector of standard error of means, can be calculated using `summarySE` function
 group: name of grouping variable
 pd: position dodge
-- **gerrorbar**
-![gerrorbar](https://raw.githubusercontent.com/seashore001x/MarkdownPic/master/sb_plot.png)
+![gerrorbar](https://github.com/seashore001x/Rrumen/blob/master/MarkdownPic/sb_plot.png)
 ---
 
+- **gRDAplot**
 ```r
 gRDAplot (x, y, group, scale = F, method = 'RDA', pointsize = 2.5, title = NULL)
 ```
-- **gRDAplot**
-![gRDAplot] (https://raw.githubusercontent.com/seashore001x/MarkdownPic/master/RDA_ggplot.png)
+![gRDAplot](https://github.com/seashore001x/Rrumen/blob/master/MarkdownPic/RDA_ggplot.png)
 ---
 
 ```r
@@ -105,7 +108,6 @@ calcPowerForRCT (alpha, piT, piC, n)
 ```
 ```r
 paste2(vector)
-
-## Examples
+```
 
 
