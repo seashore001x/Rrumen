@@ -90,6 +90,7 @@ yvars: y asxis variable
 se: a vector of standard error of means, can be calculated using `summarySE` function
 group: name of grouping variable
 pd: position dodge
+
 ![gerrorbar](https://github.com/seashore001x/Rrumen/blob/master/MarkdownPic/sb_plot.png)
 ---
 
